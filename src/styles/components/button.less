@@ -1,0 +1,58 @@
+@btn-prefix-cls: ~"@{css-prefix}-button";
+
+.@{btn-prefix-cls} {
+  border-radius: @radius-sm;
+  font-size: @size-md;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  background: @color-gray;
+  color: @text-black;
+  text-decoration: none;
+  .border(border, @color-gray);
+
+  &-error {
+    background-color: @color-red;
+    color: @color-white;
+    .border(border, @color-red);
+  }
+
+  &-warn {
+    background-color: @color-orange;
+    color: @color-white;
+    .border(border, @color-orange);
+  }
+
+  &-success {
+    background: @color-green;
+    color: @color-white;
+    .border(border, @color-green);
+  }
+
+  &-large {
+    padding: 10px 15px;
+    font-size: @size-lg;
+  }
+
+  &-medium {
+    padding: 8px 12px;
+    font-size: @size-md;
+  }
+  
+  &-small {
+    padding: 6px 9px;
+    font-size: @size-sm;
+  }
+
+  &-mini {
+    padding: 4px 6px;
+    font-size: @size-mini;
+  }
+
+  &-disabled {
+    background-color: @color-gray;
+    .border(border, @color-gray);
+    cursor: not-allowed;
+  }
+  
+}

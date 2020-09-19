@@ -1,0 +1,55 @@
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fullSize {
+  height: 100%;
+  width: 100%;
+}
+.size(@height: auto, @width: auto) {
+  height: @height;
+  width: @width;
+}
+.border(@pos, @color, @width: 1px) {
+  @{pos}: @width solid @color;
+} 
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.absolute(@left: auto, @top: auto, @right: auto, @bottom: auto) {
+  position: absolute;
+  left: @left;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+}
+.margin-center(@top: auto, @bottom: auto) {
+  margin: @top auto @bottom;
+}
+.text-center(@height, @align: center) {
+  height: @height;
+  line-height: @height;
+  text-align: @align;
+}
+.font(@fontSize: @size-md, @color: @text-black, @fontWeight: normal) {
+  font-size: @fontSize;
+  color: @color;
+  font-weight: @fontWeight;
+}
+.animation(@name, @time: 200ms) {
+  .@{name}-enter-active {
+    animation: ~"@{name}-in" @time;
+  }
+  .@{name}-leave-active {
+    animation: ~"@{name}-in" @time reverse;
+  }
+}
